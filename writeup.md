@@ -1,5 +1,5 @@
-**Finding Lane Lines on the Road**
-[img src="test_images/solidWhiteCurve.jpg", alt="Highway Road"]
+# **Finding Lane Lines on the Road**
+!["Highway Road"][img src="./test_images/solidWhiteCurve.jpg"]
 1. PIPELINE DESCRIPTION
 
 	A) MORE HELPER FUNCTIONS
