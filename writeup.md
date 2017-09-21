@@ -32,6 +32,7 @@ Next step was to detect the edges using **Canny Edge detector** which works on t
 
 #### 3) Obtaining Line Segments
 After obtaining edges in the form of pixel values, hough transform was applied. Fine tuning of parameters like min. line length, max line gap was done. 
+![Detected Line Segments after Hough transform](test_images_output/Detected Lines Segments.jpg)
 
 #### 4) Classification into two lanes
 Based on the slope values of the line segments, they were divided into left and right lane. Negative for left lane and positive for right lane. Any horizontal or vertical lines were excluded.
