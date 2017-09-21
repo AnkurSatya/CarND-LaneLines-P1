@@ -41,10 +41,11 @@ Based on the slope values of the line segments, they were divided into left and 
 
 ### 2. Shortcomings with the current pipeline
 
+One shortcoming is faced while detecting lanes with lesser radius of curvature i.e having more curvature. In this case, the line segment drawn covers only a portion of the actual lane. Another shortcoming is presented when an image, with an intensity significantly more than the regular images, is encountered. 
 
 
-### 3. Suggest possible improvements to your pipeline
+### 3. Possible Improvements
 
-A possible improvement would be to ...
-
-Another potential improvement could be to ...
+For more curved lane lines, the region of interest can be divided into multiple parts and same method as above applied to each part. Finally, lane lines obtained from each part can be connected end to end.
+A condition for excessive or low intensity of light in an image can be created. That is, if an image has excessive intensity,
+threshold values for canny edge detection should be changed accordingly.
