@@ -22,28 +22,28 @@ the effect of an outlier line which is not a part of the lane, if so.
 
 My Pipeline consisted of 5 broad steps.
 
-#### 1) Pre-processing the image
+#### A. Pre-processing the image
 a) converting the image to **GRAYSCALE** to detect edges using gradient method. Fine tuning of
 the threshold values was done to detect appropriate line segments.
 b) next step was to use some gaussain filters like GAUSSAIN BLUR. It basically decreases the gradient between any two points which makes it easier to detect lanes because now lanes' edges will be those points which still have high gradient.
 		
-#### 2) Edge Detection
+#### B. Edge Detection
 Next step was to detect the edges using **Canny Edge detector** which works on two threshold values- low and high. It calculates the gradient between neighbouring points and decides according to the threshold values.
 
-#### 3) Obtaining Line Segments
+#### C. Obtaining Line Segments
 After obtaining edges in the form of pixel values, hough transform was applied. Fine tuning of parameters like min. line length, max line gap was done. 
 ![Detected Line Segments after Hough transform](test_images_output/DetectedLineSegments.jpg)
 
-#### 4) Classification into two lanes
+#### D. Classification into two lanes
 Based on the slope values of the line segments, they were divided into left and right lane. Negative for left lane and positive for right lane. Any horizontal or vertical lines were excluded.
 
-#### 5) Drawing lines on the original image
+#### E. Drawing lines on the original image
 Finally step was to draw lines on the image. Weighted average of images, a black background image with lines drawn on it and the original image, was taken.
 
 ![Lane Lines drawn on image](test_images_output/solidWhiteCurve.jpg)
 
 
-### 2. Shortcomings with the current pipeline
+## 2. Shortcomings with the current pipeline
 
 One shortcoming is faced while detecting lanes with lesser radius of curvature i.e having more curvature. In this case, the line segment drawn covers only a portion of the actual lane. Another shortcoming is presented when an image, with an intensity significantly more than the regular images, is encountered. 
 
