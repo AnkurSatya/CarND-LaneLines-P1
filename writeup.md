@@ -37,6 +37,9 @@ After obtaining edges in the form of pixel values, hough transform was applied. 
 #### 4) Classification into two lanes
 Based on the slope values of the line segments, they were divided into left and right lane. Negative for left lane and positive for right lane. Any horizontal or vertical lines were excluded.
 
+#### 5) Drawing lines on the original image
+Finally step was to draw lines on the image. Weighted average of images, a black background image with lines drawn on it and the original image, was taken.
+
 ![Lane Lines drawn on image](test_images_output/solidWhiteCurve.jpg)
 
 
