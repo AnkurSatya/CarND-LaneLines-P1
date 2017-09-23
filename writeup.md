@@ -48,7 +48,7 @@ Finally step was to draw lines on the image. Weighted average of images, a black
 One shortcoming is faced while detecting lanes with lesser radius of curvature i.e having more curvature. In this case, the line segment drawn covers only a portion of the actual lane. Another shortcoming is presented when an image, with an intensity significantly more than the regular images, is encountered. 
 
 
-### 3. Possible Improvements
+## 3. Possible Improvements
 
 For more curved lane lines, the region of interest can be divided into multiple parts and same method as above applied to each part. Finally, lane lines obtained from each part can be connected end to end.
 
